@@ -1,18 +1,26 @@
 CREATE TABLE RealEstateData (
+    -- ID único para cada entrada, autoincrementado
     id SERIAL PRIMARY KEY,
+    -- Nome do imóvel (não pode ser nulo)
     name VARCHAR(255) NOT NULL,
+    -- Preço do imóvel (não pode ser nulo)
     price DECIMAL(10, 2) NOT NULL,
+    -- Tipo do negócio imobiliário (venda ou arrendamento)
     type VARCHAR(10) CHECK (type IN ('venda', 'arrendar')),
-    location VARCHAR(255),
+    -- Localização do imóvel
+    location VARCHAR(255) NOT NULL,
+    -- Coordenadas geográficas do imóvel
     coordinates POINT
 );
 
 CREATE TABLE Locations (
+    -- ID único para cada localização, autoincrementado
     id SERIAL PRIMARY KEY,
+    -- Nome da localização (não pode ser nulo)
 	"name" varchar(255) NOT null,
+    -- Coordenadas geográficas da localização, representadas como uma string (não pode ser nulo)
 	"coordinates" varchar(50) NOT null
 );
-
 INSERT INTO locations (name, coordinates)
 VALUES
     ('Aveiro, Oliveira de Azeméis', '40.85,-8.5'),

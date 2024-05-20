@@ -1,11 +1,14 @@
-# Use an official Alpine-based PostgreSQL image from the Docker Hub
+# Utiliza uma imagem PostgreSQL baseada em Alpine
 FROM postgres:alpine
 
-# Set environment variables for PostgreSQL
+# Define a senha do PostgreSQL
 ENV POSTGRES_PASSWORD password
 
-# Copy the initialization script into the container
+# Copia script de inicialização
 COPY init.sql /docker-entrypoint-initdb.d/
 
-# Expose PostgreSQL port (this is optional as it's already exposed by default)
+# Exporta porta padrão do PostgreSQL
 EXPOSE 5432
+
+
+

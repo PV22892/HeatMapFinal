@@ -20,15 +20,15 @@ const Heatmap: React.FC<{ data: MapProps, maxPrice: Prices, minPrice: Prices }> 
     }
 
     const housingIcon = new Icon({
-        iconUrl: 'https://img.icons8.com/plasticine/100/exterior.png',
-        iconSize: [30, 30], // size of the icon
-        popupAnchor: [-3, -76] // point from which the popup should open relative to the iconAnchor
+        iconUrl: '/remaxLogo.png',
+        iconSize: [30, 35], // size of the icon
+        popupAnchor: [0, 0] // point from which the popup should open relative to the iconAnchor
     })
 
     const markers = points.map((point, index) => (
         <Marker key={index} position={[point[0], point[1]]} icon={housingIcon}>
             <Popup>
-                Price: {point[2]}€
+                Preço: {new Intl.NumberFormat('pt-PT').format(point[2])}€
             </Popup>
         </Marker>
     ));

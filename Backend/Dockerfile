@@ -1,20 +1,18 @@
-# Use an official Node.js runtime as a parent image
+# Usa a imagem base do Node.js Alpine Linux
 FROM node:alpine
 
-# Set the working directory in the container
+# Define o diretório de trabalho dentro do conteiner
 WORKDIR /src/app
 
-# Copy package.json and package-lock.json to the working directory
+# Copia o package.json e o package-lock.json para o diretório de trabalho
 COPY package*.json ./
 
-# Install dependencies
+# Instala apenas as dependências de produção
 RUN npm install --production
 
-# Copy the rest of the application code
+# Copia o restante do código da aplicação para o diretório de trabalho
 COPY . .
 
-# Expose the port the app runs on
-EXPOSE 3000
-
-# Command to run the application
+# Comando para executar a aplicação quando o conteiner é iniciado
 CMD ["node", "src/app.js"]
+

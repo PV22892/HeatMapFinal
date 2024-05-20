@@ -336,10 +336,10 @@ def generate_price(type_):
     
     # Define the price ranges and their corresponding percentages
     if type_ == 'arrendar':
-        price_ranges = [(0, 5000) , (50001,100000),(100001,500000)]
+        price_ranges = [(0, 5000) , (5001,10000),(10001,50000)]
         percentages = [0.99, 0.05, 0.05]
     else:
-        price_ranges = [(0, 500000), (500001, 1000000), (1000001, 20000000)]
+        price_ranges = [(0, 50000), (50001, 100000), (100001, 2000000)]
         percentages = [0.83, 0.11, 0.06]
     
     # Choose a price range based on the defined percentages

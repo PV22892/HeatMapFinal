@@ -44,7 +44,7 @@ const Button: React.FC = () => {
             <div style={{ padding: '5px' }}>
                 <button
                     onClick={handleClick}
-                    className="bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow"
+                    className="px-6 py-3.5 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-md dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
                 >
                     Submit
                 </button>

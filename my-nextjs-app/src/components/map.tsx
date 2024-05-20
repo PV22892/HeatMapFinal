@@ -13,7 +13,7 @@ const map: React.FC<{ data: MapProps, maxPrice: Prices, minPrice: Prices, mapTyp
     console.log(firstCoordinates);
     return (
         <>
-            <MapContainer id="Map_Container" style={{ height: '100vh', width: '100%' }} center={firstCoordinates} zoom={13} scrollWheelZoom={true}>
+            <MapContainer id="Map_Container" style={{ height: '80vh', width: '100%' }} center={firstCoordinates} zoom={14} scrollWheelZoom={true}>
                 <TileLayer id="Map_TileLayer"
                            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
