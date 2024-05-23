@@ -23,6 +23,10 @@ const Button: React.FC = () => {
         if (!search) {
             return alert("Fill Location");
         }
+        setData(null);
+        setMinPrice(null);
+        setMaxPrice(null);
+        setMapType(null);
 
         try {
             const res = await fetch(`http://localhost:8000/listByLocation?location=${search}&type=${dataType}`);
